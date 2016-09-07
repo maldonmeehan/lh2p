@@ -1,0 +1,18 @@
+<table class="table table-bordered table-striped" id="sortable">
+  <thead>
+    <tr>
+      <th>
+        Title
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @lessons.each do |lesson| %>
+      <tr data-item-id=<%= "#{lesson.id}" %> class="item">
+        <td>
+          <%= lesson.name %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
