@@ -1,0 +1,9 @@
+<%= render "layouts/errors", :object => @new_section %>
+
+<%= form_for [@chapter, @new_section] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :chapter %>
+  <%= f.collection_select :chapter_id, Chapter.all, :id, :name %>
+  <%= f.submit %>
+<% end %>

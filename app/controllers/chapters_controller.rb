@@ -2,6 +2,7 @@ class ChaptersController < ApplicationController
   def index
     @chapters = Chapter.all
     @chapter = Chapter.new
+    @new_section = Section.new
     render :index
   end
 
