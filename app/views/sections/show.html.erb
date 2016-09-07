@@ -10,5 +10,4 @@
 
 <p><%= link_to "Return to chapters", chapters_path %></p>
 
-<h2>Create a new section</h2>
-<%= render 'form' %>
+<%= link_to 'Create a new Lesson', new_chapter_section_lesson_path(@chapter, @section) %>

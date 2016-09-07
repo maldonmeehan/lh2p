@@ -1,6 +1,6 @@
-<%= render "layouts/errors", :object => @new_section %>
+<%= render "layouts/errors", :object => @section %>
 
-<%= form_for [@chapter, @new_section] do |f| %>
+<%= form_for [@chapter, @section] do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :chapter %>

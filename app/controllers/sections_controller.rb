@@ -4,6 +4,11 @@ class SectionsController < ApplicationController
     render :index
   end
 
+  def new
+    @section = Section.new
+    @chapter = Chapter.find(params[:chapter_id])
+  end
+
   def create
     @section = Section.new(section_params)
     if @section.save
@@ -12,7 +17,6 @@ class SectionsController < ApplicationController
   end
 
   def show
-    @new_section = Section.new
     @section = Section.find(params[:id])
     @chapter = Chapter.find(params[:chapter_id])
     render :show
