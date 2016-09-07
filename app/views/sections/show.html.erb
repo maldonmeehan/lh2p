@@ -1,0 +1,11 @@
+<h1><%= @section.name %></h1>
+
+<ul>
+  <% @section.lessons.each do |lesson| %>
+  <li>
+    <%= link_to lesson.name, chapter_section_lesson_path(@chapter, @section, lesson) %>
+  </li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Return to chapters", chapters_path %></p>

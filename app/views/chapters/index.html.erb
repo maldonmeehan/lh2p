@@ -1,0 +1,22 @@
+<h1>Chapters</h1>
+<ul>
+  <% @chapters.each do |chapter| %>
+    <li><%= link_to chapter.name, chapter_path(chapter) %>
+      <ul>
+        <% chapter.sections.each do |section| %>
+        <li>
+          <%= link_to section.name, chapter_section_path(chapter, section) %>
+          <ul>
+            <% section.lessons.each do |lesson| %>
+            <li><%= lesson.name %></li>
+            <% end %>
+          </ul>
+        </li>
+        <% end %>
+      </ul>
+    </li>
+  <% end %>
+</ul>
+
+<h2>Create a new chapter</h2>
+<%= render 'form' %>

@@ -1,0 +1,15 @@
+<h1><%= @chapter.name %></h1>
+<ul>
+  <% @chapter.sections.each do |section| %>
+  <li>
+    <%= section.name %>
+    <ul>
+      <% section.lessons.each do |lesson| %>
+      <li><%= lesson.name %></li>
+      <% end %>
+    </ul>
+  </li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Return to chapters", chapters_path %></p>
