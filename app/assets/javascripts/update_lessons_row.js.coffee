@@ -23,7 +23,7 @@ jQuery ->
         position = ui.item.index() # this will not work with paginated items, as the index is zero on every page
         $.ajax(
           type: 'POST'
-          url: window.location.pathname + 'update_row_order'
+          url: window.location.pathname + '/update_row_order'
           dataType: 'json'
           data: { lesson: {lesson_id: item_id, row_order_position: position } }
         )
