@@ -11,6 +11,7 @@ class SectionsController < ApplicationController
 
   def create
     @section = Section.new(section_params)
+    @section.chapter = Chapter.find(params[:chapter_id])
     if @section.save
       redirect_to chapters_path
     end

@@ -3,7 +3,5 @@
 <%= form_for [@chapter, @section] do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
-  <%= f.label :chapter %>
-  <%= f.collection_select :chapter_id, Chapter.all, :id, :name %>
   <%= f.submit %>
 <% end %>
