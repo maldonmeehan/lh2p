@@ -4,7 +4,7 @@
 
 A clone  
 
-By Maldon Meehan & Cory Olsen
+By Maldon Meehan & Cory Olson
 
 ## Description
 learnhowtoprogram.com is powered by a fairly simple Rails app. Rebuild it today with your partner. Include integration testing with Capybara for all interactions in your browser, especially clicking on links and making new chapters/sections/lessons.
